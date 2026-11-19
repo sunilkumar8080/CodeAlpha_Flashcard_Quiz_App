@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">FC</div>
+      <div>
+        <h1>Flashcard Quiz</h1>
+        <p>Learn smarter, one card at a time.</p>
+      </div>
+    </header>
+
+    <section class="study-area" aria-label="Flashcard">
+      <div class="card-meta">
+        <span id="cardNumber">Card 1 of 3</span>
+        <span id="cardType">QUESTION</span>
+      </div>
+      <article class="flashcard" id="flashcard">
+        <h2 id="cardText">Loading flashcard...</h2>
+      </article>
+      <button class="button primary full" id="showAnswerBtn">Show Answer</button>
+      <div class="navigation">
+        <button class="button secondary" id="prevBtn">← Previous</button>
+        <button class="button secondary" id="nextBtn">Next →</button>
+      </div>
+    </section>
+
+    <section class="management" aria-label="Flashcard management">
+      <h3>Manage your cards</h3>
+      <div class="management-buttons">
+        <button class="button add" id="addBtn">＋ Add Card</button>
+        <button class="button edit" id="editBtn">✎ Edit</button>
+        <button class="button delete" id="deleteBtn">🗑 Delete</button>
+      </div>
+    </section>
+
+    <form id="cardForm" class="form hidden">
+      <h3 id="formTitle">Add Flashcard</h3>
+      <label for="questionInput">Question</label>
+      <input id="questionInput" type="text" placeholder="Enter your question" required maxlength="300">
+      <label for="answerInput">Answer</label>
+      <textarea id="answerInput" placeholder="Enter your answer" required maxlength="1000"></textarea>
+      <div class="form-actions">
+        <button class="button primary" type="submit">Save Card</button>
+        <button class="button secondary" type="button" id="cancelBtn">Cancel</button>
+      </div>
+    </form>
+
+    <footer>Cards are saved automatically in this browser.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
